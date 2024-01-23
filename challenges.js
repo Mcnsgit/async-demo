@@ -13,9 +13,9 @@ const { getTrex, even, unstable } = require('./promises')
 // promises import, do not change
 
 
-const getDino = async () => {
+const getDino = () => {
     try {
-        let result = await getTrex()
+        let result = getTrex()
         console.log(result)
     } catch (error) {
         console.log('error:', error)
@@ -23,21 +23,20 @@ const getDino = async () => {
 }
 // getDino()
 
-const divisible = async (num) => {
-    try {
-        let result = await even(num)
+const divisible =  (num) => {
+   
+        let result
         console.log(result)
-    } catch (error){
+     catch (error){
         console.log('error:', error)
     }
 }
 // divisible()
-const getResponse = async () => {
-    try {
-        let result = await unstable()
+const getResponse =  () => {
+    
+        let result
         console.log(result)
-    } catch (error) {
         console.log(error)
-    }
+    
 }
 // getResponse()
